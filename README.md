@@ -1,17 +1,67 @@
-# CS-350
+# Thermostat System using TI LaunchPad and Code Composer Studio
 
-# Summarize the project and what problem it was solving.
+## Overview
+This project implements a thermostat system using the Texas Instruments (TI) LaunchPad development kit and Code Composer Studio (CCS). The system monitors the ambient temperature and adjusts a connected heating/cooling device to maintain a user-defined temperature setpoint. The system is designed with embedded C programming and utilizes Pulse Width Modulation (PWM) for controlling the output device.
 
-The project I worked on involved utilizing embedded systems to build a prototype thermostat. The development process integrated I2C, UART, and GPIO functionalities to successfully complete the project.
+## Hardware Requirements
+TI LaunchPad Development Kit: CC3220SF-LAUNCHXL
+User Interface: Buttons for adjusting the temperature setpoint, an LCD or LED display for showing the current temperature and setpoint
+Breadboard, Jumper Wires, Resistors, etc.: For connecting the components
+Software Requirements
+Code Composer Studio (CCS): IDE for writing, compiling, and debugging the code
+TI Driver Libraries: For interfacing with the hardware peripherals
 
-# What did you do particularly well?
-I excelled in designing the state machines, ensuring that their functionalities remained independent of one another. This allowed for the seamless integration of additional timers into the task scheduler.
+## Project Structure
+plaintext
+Copy code
+├── src/
+│   ├── main.c              # Main program file
+│   ├── thermostat.c        # Thermostat control logic
+│   ├── pwm_control.c       # PWM control functions
+│   ├── temperature_sensor.c# Temperature sensor interface
+│   ├── ui_control.c        # User interface management
+│   └── ...                 # Other necessary files
+├── include/
+│   ├── thermostat.h        # Header files for each module
+│   ├── pwm_control.h
+│   ├── temperature_sensor.h
+│   ├── ui_control.h
+│   └── ...
+├── README.md               # Project documentation
+├── LICENSE                 # Project license (if applicable)
+└── .gitignore              # Git ignore file (if using version control)
 
-# Where could you improve?
-Recently, I've experienced a challenging few week which affected my timeliness and productivity. I am actively seeking ways to enhance my performance and make notable improvements in my work.
+## Features
+Temperature Monitoring: Continuously monitors the ambient temperature using a connected sensor.
+Setpoint Adjustment: Allows users to set the desired temperature using onboard buttons.
+Automatic Control: Adjusts the heating/cooling device using PWM to maintain the set temperature.
+User Feedback: Displays the current temperature and setpoint on an LCD or LED display.
+Low Power Mode: Enters a low-power state when the system is idle to conserve energy.
+Getting Started
+1. Clone the Repository
+Clone the project repository to your local machine.
 
-# What skills from this project will be particularly transferable to other projects and/or course work?
-Gaining a deeper comprehension of low-level coding principles will contribute to enhancing the efficiency of my code. It will also enable me to optimize resource utilization and improve the overall performance of my applications.
+bash
+Copy code
+git clone https://github.com/yourusername/thermostat-launchpad.git
+cd thermostat-launchpad
+2. Install Code Composer Studio (CCS)
+Ensure you have Code Composer Studio installed. If not, download and install it from the TI website.
 
-# How did you make this project maintainable, readable, and adaptable?
-I incorporated detailed comments within my code and then meticulously formatted it to ensure a neat and organized appearance. Additionally, I maintained consistency throughout the entire coding process for enhanced readability and coherence.
+3. Open the Project
+Open Code Composer Studio, go to File > Import and select Code Composer Studio > CCS Projects. Browse to the cloned repository directory and import the project.
+
+4. Build and Debug
+Connect your TI LaunchPad to your computer and click on Build and then Debug in CCS. The program should be compiled, and you can start debugging on the LaunchPad.
+
+5. Run the Program
+Once debugging is successful, you can run the program on the LaunchPad. Adjust the temperature setpoint using the buttons, and observe the system controlling the heating/cooling device.
+
+Customization
+Sensor Calibration: Adjust the calibration parameters in temperature_sensor.c if your sensor requires specific calibration.
+PWM Frequency: Modify the PWM frequency in pwm_control.c based on the requirements of your heating/cooling device.
+User Interface: Customize the display format or control buttons in ui_control.c.
+Troubleshooting
+Sensor Reading Errors: Ensure the temperature sensor is correctly connected and the pins are configured properly in the code.
+PWM Not Working: Verify the PWM initialization and check the connections to the heating/cooling device.
+Display Issues: Confirm that the LCD/LED connections match the pin assignments in the code.
