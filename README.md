@@ -23,7 +23,7 @@ Clone the project repository to your local machine.
 
 bash
 Copy code
-git clone https://github.com/yourusername/thermostat-launchpad.git
+git clone git@github.com:JoshGersh/Embedded-Program-for-Controlling-Light-Brightness-with-Buttons.git
 cd thermostat-launchpad
 2. Install Code Composer Studio (CCS)
 Ensure you have Code Composer Studio installed. If not, download and install it from the TI website.
