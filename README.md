@@ -11,26 +11,6 @@ Software Requirements
 Code Composer Studio (CCS): IDE for writing, compiling, and debugging the code
 TI Driver Libraries: For interfacing with the hardware peripherals
 
-## Project Structure
-plaintext
-Copy code
-├── src/
-│   ├── main.c              # Main program file
-│   ├── thermostat.c        # Thermostat control logic
-│   ├── pwm_control.c       # PWM control functions
-│   ├── temperature_sensor.c# Temperature sensor interface
-│   ├── ui_control.c        # User interface management
-│   └── ...                 # Other necessary files
-├── include/
-│   ├── thermostat.h        # Header files for each module
-│   ├── pwm_control.h
-│   ├── temperature_sensor.h
-│   ├── ui_control.h
-│   └── ...
-├── README.md               # Project documentation
-├── LICENSE                 # Project license (if applicable)
-└── .gitignore              # Git ignore file (if using version control)
-
 ## Features
 Temperature Monitoring: Continuously monitors the ambient temperature using a connected sensor.
 Setpoint Adjustment: Allows users to set the desired temperature using onboard buttons.
